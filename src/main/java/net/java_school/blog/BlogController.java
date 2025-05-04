@@ -21,7 +21,7 @@ public class BlogController {
 
     @RequestMapping(value="java/{id}", method=RequestMethod.GET)
     @ResponseBody
-    public Post getPost(@PathVariable String id) {
+    public Post getPost(@PathVariable(name="id") String id) {
         Post post = new Post();
 
         switch (id) {
